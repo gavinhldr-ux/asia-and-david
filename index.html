@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asia &amp; David · Order of Ceremony</title>
+<meta name="description" content="The wedding ceremony of Asia Wallace and David Thomas. Saturday, October 17, 2026 · The Verandah, Clarendon Park.">
+<meta property="og:title" content="Asia &amp; David · Order of Ceremony">
+<meta property="og:description" content="The wedding ceremony of Asia Wallace and David Thomas. Saturday, October 17, 2026.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234a1420'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' font-style='italic' fill='%23d4b47c' text-anchor='middle'%3EA%26amp;D%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#4a1420">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@500;600&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: an ink-stain reveal opens a deep-green cover; below it, the booklet's pages stack as ivory leaves with a gold double frame, closing on a dark back cover. Deliberately single-theme, like printed stationery. */
+:root {
+  --ink: #4a1420;        /* burgundy: cover + back cover ground */
+  --ink-deep: #2a0a11;   /* stain rim */
+  --paper: #fbf6ec;      /* cream page leaf */
+  --ground: #efe4d2;     /* behind the leaves */
+  --text: #3a1d22;
+  --soft: #6a5054;
+  --gold: #8a6c38;       /* gold on paper (text-safe) */
+  --gold-lt: #cdb07a;    /* gold on ink */
+  --display: "Pinyon Script", "Snell Roundhand", "Apple Chancery", cursive;
+  --serif: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --label: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+body { margin: 0; background: var(--ground); color: var(--text); font-family: var(--serif); font-size: 19px; line-height: 1.4; -webkit-font-smoothing: antialiased; }
+body.intro { overflow: hidden; }
+p, h1, h2, h3, h4, ol, ul { margin: 0; padding: 0; }
+
+/* shared */
+.orn { display: block; width: 104px; height: 12px; margin: 0 auto; color: var(--gold); }
+.orn.sm { width: 70px; }
+.kicker { font-family: var(--label); font-weight: 500; font-size: 10.5px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+
+/* COVER */
+.cover {
+  position: relative; min-height: 100svh; background: var(--ink); color: var(--paper);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  padding-block: 120px 72px;
+  padding-left: max(28px, env(safe-area-inset-left, 0px)); padding-right: max(28px, env(safe-area-inset-right, 0px));
+  background-image: var(--cover-img, radial-gradient(120% 80% at 50% 40%, #631d2c 0%, #4a1420 55%, #300c15 100%));
+  background-size: cover; background-position: center;
+  overflow: hidden;
+}
+.cover::before, .cover::after { content: ""; position: absolute; pointer-events: none; border: 1px solid rgba(205,176,122,.55); }
+.cover::before { inset: 14px; }
+.cover::after { inset: 20px; border-width: .5px; border-color: rgba(205,176,122,.35); }
+.cover .kicker { color: var(--gold-lt); }
+.cover .orn { color: var(--gold-lt); margin-block: 22px; }
+.cover-inner { display: flex; flex-direction: column; align-items: center; gap: 4px; position: relative; z-index: 1; }
+.cover h1 { font-family: var(--display); font-weight: 400; font-size: clamp(50px, 15vw, 78px); line-height: 1.02; color: var(--paper); text-wrap: balance; }
+.cover .amp { font-family: var(--display); font-size: clamp(34px, 9vw, 48px); line-height: 1; color: var(--gold-lt); }
+.cover .kicker { margin-bottom: 14px; }
+.cover .date { font-size: 21px; font-weight: 500; letter-spacing: .05em; }
+.cover .venue { font-family: var(--label); font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: rgba(251,248,241,.72); margin-top: 8px; line-height: 1.8; }
+.cue { position: relative; margin-top: 46px; display: flex; flex-direction: column; align-items: center; gap: 8px; font-family: var(--label); font-size: 9.5px; letter-spacing: .28em; text-transform: uppercase; color: rgba(205,176,122,.9); text-decoration: none; z-index: 1; }
+.cue svg { width: 14px; height: 14px; animation: bob 2.2s ease-in-out infinite; }
+@keyframes bob { 0%,100% { transform: translateY(0); opacity: .6 } 50% { transform: translateY(5px); opacity: 1 } }
+
+/* cover entrance (runs as the ink settles) */
+.rise { opacity: 1; transform: none; }
+body.intro .rise { opacity: 0; transform: translateY(10px); }
+body.reveal .rise { animation: rise 1.4s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i, 0) * 140ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); filter: blur(3px) } to { opacity: 1; transform: none; filter: none } }
+
+/* INK CANVAS */
+#ink { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 50; touch-action: none; transition: opacity 1.1s cubic-bezier(.45,0,.25,1); }
+#ink.gone { opacity: 0; pointer-events: none; }
+
+/* PAGES */
+.leaves {
+  display: flex; flex-direction: column; gap: 18px; max-width: 520px; margin: 0 auto;
+  padding-block: 22px 26px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.leaf {
+  position: relative; background: var(--paper); text-align: center;
+  padding: 56px 30px 54px; box-shadow: 0 1px 2px rgba(74,20,32,.08), 0 10px 30px -18px rgba(74,20,32,.35);
+}
+.leaf::before, .leaf::after { content: ""; position: absolute; pointer-events: none; border: 1px solid rgba(138,108,56,.55); }
+.leaf::before { inset: 10px; }
+.leaf::after { inset: 14px; border-width: .5px; border-color: rgba(138,108,56,.35); }
+.leaf > * + * { margin-top: 26px; }
+.head { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.head h2 { font-family: var(--display); font-weight: 400; font-size: 46px; line-height: 1.15; color: var(--text); text-wrap: balance; }
+.item { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.item h3 { font-family: var(--label); font-weight: 600; font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--text); text-wrap: balance; line-height: 1.6; }
+.item .sub { font-style: italic; font-weight: 500; color: var(--gold); font-size: 19px; }
+.item .body { color: var(--soft); max-width: 32ch; font-size: 18px; line-height: 1.42; }
+.song { display: flex; flex-direction: column; align-items: center; gap: 2px; margin-top: 8px; }
+.song span { font-family: var(--label); font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); }
+.song em { font-weight: 600; font-size: 20px; }
+
+.proc { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-top: 8px; font-size: 19px; }
+.proc em { color: var(--gold); font-weight: 600; }
+.proc .esc { display: block; font-style: italic; font-size: 16px; color: var(--soft); }
+.worship { list-style: none; display: flex; flex-direction: column; gap: 4px; margin-top: 8px; font-style: italic; font-weight: 500; font-size: 18.5px; }
+
+.intro-leaf .bigquote { font-style: italic; font-weight: 500; font-size: 27px; line-height: 1.28; text-wrap: balance; }
+.cite { font-family: var(--label); font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); }
+.intro-leaf .names { font-size: 17px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; line-height: 1.6; }
+.intro-leaf .detail { font-style: italic; color: var(--soft); font-size: 18px; line-height: 1.45; }
+.intro-leaf > .cite { margin-top: 12px; }
+
+.kiss { font-style: italic; font-size: 24px; margin-top: 2px; }
+
+.party { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 14px; }
+.ros { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ros h4 { font-family: var(--label); font-weight: 600; font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); min-height: 1.6em; line-height: 1.6; }
+.ros p { font-size: 18px; line-height: 1.3; }
+.ros i { display: block; font-size: 15px; color: var(--soft); }
+
+/* BACK COVER */
+.back {
+  position: relative; background: var(--ink); color: var(--paper); text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  padding-block: 72px calc(72px + env(safe-area-inset-bottom, 0px));
+  padding-left: max(28px, env(safe-area-inset-left, 0px)); padding-right: max(28px, env(safe-area-inset-right, 0px));
+}
+.back::before { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(205,176,122,.45); pointer-events: none; }
+.back .kicker, .back .cite { color: var(--gold-lt); }
+.back .orn { color: var(--gold-lt); margin-block: 10px; }
+.back .bigquote { font-style: italic; font-weight: 500; font-size: 28px; line-height: 1.28; max-width: 18ch; text-wrap: balance; }
+.back .couple { font-family: var(--display); font-size: 48px; line-height: 1.1; }
+.back .tagline { font-family: var(--label); font-size: 9.5px; letter-spacing: .22em; text-transform: uppercase; color: rgba(251,248,241,.72); line-height: 2; }
+.back .hashtag { font-style: italic; font-weight: 600; font-size: 22px; color: var(--gold-lt); margin-top: 14px; }
+
+/* LINE-ART FLORALS */
+.spray { position: absolute; width: min(62vw, 262px); height: auto; pointer-events: none; overflow: visible; }
+.spray.tr { top: 0; right: 0; transform: scaleX(-1); }
+.spray.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+.spray.br { bottom: 0; right: 0; transform: scale(-1,-1); }
+.spray.tl { top: 0; left: 0; }
+.back .spray { width: min(40vw, 160px); }
+.back { padding-block: 120px calc(120px + env(safe-area-inset-bottom, 0px)) !important; }
+.spray.small { width: 96px; }
+.intro-leaf { padding-block: 76px 74px; }
+.fl-fill { fill: var(--ink); }
+.fl-line { fill: none; stroke: var(--gold-lt); stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+.leaf .fl-fill { fill: var(--paper); }
+.leaf .fl-line { stroke: var(--gold); stroke-width: 1.5; opacity: .55; }
+body.intro .cover .fl-line { stroke-dasharray: 1; stroke-dashoffset: 1; }
+body.reveal .cover .fl-line { stroke-dasharray: 1; animation: draw 2.4s cubic-bezier(.4,.1,.3,1) both; animation-delay: var(--d, 0s); }
+@keyframes draw { from { stroke-dashoffset: 1 } to { stroke-dashoffset: 0 } }
+
+a:focus-visible, button:focus-visible { outline: 1px solid var(--gold-lt); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .cue svg { animation: none; }
+  body.reveal .rise { animation: none; }
+  body.reveal .cover .fl-line { animation: none; stroke-dasharray: none; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="ink" aria-hidden="true"></canvas>
+
+<header class="cover" id="top">
+  <svg class="spray tr" viewBox="-6 -6 350 350" aria-hidden="true" focusable="false"></svg>
+  <svg class="spray bl" viewBox="-6 -6 350 350" aria-hidden="true" focusable="false"></svg>
+  <div class="cover-inner">
+    <p class="kicker rise" style="--i:0">The Wedding Ceremony of</p>
+    <h1 class="rise" style="--i:1">Asia Wallace</h1>
+    <p class="amp rise" style="--i:2" aria-hidden="true">&amp;</p>
+    <h1 class="rise" style="--i:3">David Thomas</h1>
+    <svg class="orn rise" style="--i:4" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg>
+    <p class="date rise" style="--i:5">Saturday, October 17, 2026</p>
+    <p class="venue rise" style="--i:6">The Verandah<br>Lot 1 Clarendon Park, Clarendon</p>
+  <a class="cue rise" style="--i:8" href="#welcome">Order of Ceremony
+    <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 4.5 L7 9.5 L12 4.5" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></a>
+  </div>
+
+</header>
+
+<main class="leaves">
+
+  <section class="leaf intro-leaf" id="welcome">
+    <svg class="spray tl small" viewBox="-6 -6 350 350" aria-hidden="true" focusable="false"></svg>
+    <svg class="spray br small" viewBox="-6 -6 350 350" aria-hidden="true" focusable="false"></svg>
+    <p class="kicker">A God Centered Union</p>
+    <p class="bigquote">&ldquo;A cord of three strands is not quickly broken.&rdquo;</p>
+    <p class="cite">Ecclesiastes 4:12</p>
+    <svg class="orn" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg>
+    <p class="names">Asia Wallace<br>&amp; David Thomas</p>
+    <p class="detail">Saturday, the seventeenth of October<br>Two thousand and twenty-six</p>
+    <p class="detail">The Verandah<br>Lot 1 Clarendon Park, Clarendon</p>
+  </section>
+
+  <section class="leaf" id="gathering">
+    <div class="head"><p class="kicker">Order of Ceremony</p><h2>The Gathering</h2>
+      <svg class="orn sm" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg></div>
+    <div class="item"><h3>Prelude</h3><p class="body">Soft Christian music as guests are seated</p></div>
+    <div class="item"><h3>The Processional</h3>
+      <ol class="proc">
+        <li>Grandmother of the Groom</li>
+        <li>Mother of the Bride and Groom</li>
+        <li>Father of the Groom</li>
+        <li>The Groom &nbsp;<em>David Thomas</em></li>
+        <li>Bridesmaids &amp; Groomsmen</li>
+        <li>Best Man &amp; Matron of Honour</li>
+        <li>Flower Friends</li>
+        <li>The Bride &nbsp;<em>Asia Wallace</em><span class="esc">escorted by her father, Michael Wallace</span></li>
+      </ol>
+      <p class="song"><span>Bridal Entrance</span><em>Canon in D &nbsp;·&nbsp; Goodness of God</em></p>
+    </div>
+  </section>
+
+  <section class="leaf" id="covenant">
+    <div class="head"><p class="kicker">Order of Ceremony</p><h2>The Covenant</h2>
+      <svg class="orn sm" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg></div>
+    <div class="item"><h3>Welcome &amp; Introduction</h3><p class="sub">Bishop William Hutchinson</p><p class="body">Marriage Official</p></div>
+    <div class="item"><h3>Scripture Reading</h3><p class="sub">Ecclesiastes 4:9&ndash;12</p><p class="body">Read by Shenel Graham. A Scripture reflecting the beauty, covenant, and blessing of marriage.</p></div>
+    <div class="item"><h3>Personalized Wedding Vows</h3><p class="sub">Asia &amp; David</p><p class="body">A heartfelt declaration of love, commitment, faith, and the promises they make to one another before God, family, and friends.</p></div>
+    <div class="item"><h3>Exchange of Rings</h3></div>
+  </section>
+
+  <section class="leaf" id="blessing">
+    <div class="head"><p class="kicker">Order of Ceremony</p><h2>The Blessing</h2>
+      <svg class="orn sm" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg></div>
+    <div class="item"><h3>Signing of the Marriage Certificate</h3><p class="body">As Asia and David make their union official, we invite you to share in this special moment through music.</p>
+      <p class="song"><span>Performed by Christian Roberts</span><em>Gratitude</em></p></div>
+    <div class="item"><h3>Prayer for the Couple</h3><p class="sub">Led by Pastor Charlene Reid</p><p class="body">A special prayer of blessing over Asia and David as they begin their life together as husband and wife.</p></div>
+    <div class="item"><h3>Worship Session</h3>
+      <ul class="worship">
+        <li>We Need Your Presence</li><li>Build Your Home on Your Worship</li><li>Joy</li><li>Praise</li><li>My God Is Still the Same</li>
+        <li>This Is Amazing Grace</li><li>Graves Into Gardens</li><li>Joy Is Coming</li><li>Omemma</li><li>For Life</li>
+      </ul></div>
+  </section>
+
+  <section class="leaf" id="celebration">
+    <div class="head"><p class="kicker">Order of Ceremony</p><h2>The Celebration</h2>
+      <svg class="orn sm" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg></div>
+    <div class="item"><h3>Holy Communion</h3><p class="body">Asia and David will partake in Holy Communion, honouring Christ at the centre of their marriage and recognizing Him as the foundation of their union.</p></div>
+    <div class="item"><h3>The Kiss</h3><p class="kiss">&ldquo;You may now kiss the bride.&rdquo;</p></div>
+    <div class="item"><h3>The Recessional</h3><p class="body">The newly married couple and wedding party make their joyful exit.</p>
+      <p class="song"><span>Recessional</span><em>I Thank God</em></p></div>
+  </section>
+
+  <section class="leaf" id="party">
+    <div class="head"><p class="kicker">With Gratitude</p><h2>The Wedding Party</h2>
+      <svg class="orn sm" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg></div>
+    <div class="party">
+      <div class="ros"><h4>Matron of Honour</h4><p>Kara Fong</p></div>
+      <div class="ros"><h4>Best Man</h4><p>Joshua Tresure</p></div>
+      <div class="ros"><h4>Bridesmaids</h4><p>Allison Phipps</p><p>Jada Wallace<i>sister of the bride</i></p><p>Carlisa Smith</p></div>
+      <div class="ros"><h4>Groomsmen</h4><p>Kenya&rsquo;s Thomas</p><p>Apatrick Minott</p><p>Joshua Thomas</p></div>
+      <div class="ros"><h4>Flower Friends</h4><p>Shenel Graham</p><p>Kadijah Ricketts</p><p>Kimone Logan</p></div>
+      <div class="ros"><h4 aria-hidden="true">&nbsp;</h4><p>Kuwayne Campbell</p><p>Demar Greene</p><p>Marlon Williams</p></div>
+    </div>
+    <svg class="orn sm" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg>
+    <div class="party">
+      <div class="ros"><h4>Marriage Official</h4><p>Bishop William Hutchinson</p></div>
+      <div class="ros"><h4>Father of the Bride</h4><p>Michael Wallace</p></div>
+      <div class="ros"><h4>Prayer</h4><p>Pastor Charlene Reid</p></div>
+      <div class="ros"><h4>Musical Performance</h4><p>Christian Roberts</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="back">
+  <svg class="spray tl" viewBox="-6 -6 350 350" aria-hidden="true" focusable="false"></svg>
+  <svg class="spray br" viewBox="-6 -6 350 350" aria-hidden="true" focusable="false"></svg>
+  <p class="kicker">And so, their forever begins&hellip;</p>
+  <p class="bigquote">&ldquo;As for me and my house, we will serve the Lord.&rdquo;</p>
+  <p class="cite">Joshua 24:15</p>
+  <svg class="orn" viewBox="0 0 104 12" aria-hidden="true"><line x1="0" y1="6" x2="42" y2="6" stroke="currentColor" stroke-width=".8"/><line x1="62" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width=".8"/><path d="M52 1 L57 6 L52 11 L47 6 Z" fill="currentColor"/></svg>
+  <p class="couple">Asia &amp; David Thomas</p>
+  <p class="tagline">United in Love · Anchored in Faith<br>Centered on God</p>
+  <p class="hashtag">#ToastToThomas</p>
+</footer>
+
+
+<script>
+/* Gold line-art botanicals, drawn from code with a fixed seed so the art is identical on every load. */
+window.Flora = (function () {
+  function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  const f = n => n.toFixed(1);
+  // smooth curve through points (Catmull-Rom -> cubic Bezier)
+  function smooth(p, closed) {
+    if (closed) p = [p[p.length-1], ...p, p[0], p[1]]; else p = [p[0], ...p, p[p.length-1]];
+    let d = `M${f(p[1][0])} ${f(p[1][1])}`;
+    for (let i = 1; i < p.length - 2; i++) {
+      const [x0,y0]=p[i-1],[x1,y1]=p[i],[x2,y2]=p[i+1],[x3,y3]=p[i+2];
+      d += `C${f(x1+(x2-x0)/6)} ${f(y1+(y2-y0)/6)} ${f(x2-(x3-x1)/6)} ${f(y2-(y3-y1)/6)} ${f(x2)} ${f(y2)}`;
+    }
+    return d + (closed ? 'Z' : '');
+  }
+  const D2R = Math.PI/180;
+  function cubic(P, t) { const u=1-t; return [0,1].map(k => u*u*u*P[0][k]+3*u*u*t*P[1][k]+3*u*t*t*P[2][k]+t*t*t*P[3][k]); }
+  function cubicDir(P, t) { const u=1-t; const d=[0,1].map(k => 3*u*u*(P[1][k]-P[0][k])+6*u*t*(P[2][k]-P[1][k])+3*t*t*(P[3][k]-P[2][k])); return Math.atan2(d[1], d[0]); }
+
+  function make(seed) {
+    const R = rng(seed);
+    const lines = [], solids = [];  // lines: stroke paths; solids: filled occluders drawn just before their lines
+    const groups = [];             // [{fill:d, lines:[d...]}] in paint order
+    const group = () => { const g = { fills: [], lines: [] }; groups.push(g); return g; };
+
+    function stem(P) { const g = group(); g.lines.push(`M${f(P[0][0])} ${f(P[0][1])}C${P.slice(1).map(p=>f(p[0])+' '+f(p[1])).join(' ')}`); }
+    function leaf(x, y, a, L, w) {
+      const g = group(); const dx=Math.cos(a), dy=Math.sin(a), nx=-dy, ny=dx;
+      const P = (t, s) => [x+dx*L*t+nx*w*s, y+dy*L*t+ny*w*s];
+      const tip = P(1, 0), bend = (R()-.5)*.25;
+      const outline = smooth([P(0,0),P(.2,.7+bend),P(.5,1),P(.8,.55-bend),tip,P(.8,-.52+bend),P(.5,-.97),P(.2,-.68-bend)], true);
+      g.fills.push(outline); g.lines.push(outline);
+      g.lines.push(smooth([P(0,0),P(.4,.06),P(.88,0)]));
+      for (const t of [.26,.44,.62]) { g.lines.push(`M${f(P(t,0)[0])} ${f(P(t,0)[1])}Q${f(P(t+.08,.3)[0])} ${f(P(t+.08,.3)[1])} ${f(P(t+.2,.62)[0])} ${f(P(t+.2,.62)[1])}`);
+        g.lines.push(`M${f(P(t,0)[0])} ${f(P(t,0)[1])}Q${f(P(t+.08,-.3)[0])} ${f(P(t+.08,-.3)[1])} ${f(P(t+.2,-.62)[0])} ${f(P(t+.2,-.62)[1])}`); }
+    }
+    function petal(cx, cy, r, a0, span, tuck, wob) {
+      const pts = []; for (let i = 0; i <= 14; i++) { const t=i/14, th=(a0+span*t)*D2R; const rr=r*(1-tuck+tuck*Math.sin(Math.PI*t))*(1+(R()-.5)*wob); pts.push([cx+Math.cos(th)*rr, cy+Math.sin(th)*rr]); }
+      return smooth(pts);
+    }
+    function rose(cx, cy, r, rot) {
+      const g = group();
+      const rim = []; for (let i = 0; i < 40; i++) { const th=i/40*360; const k=Math.abs(Math.sin((th-rot)*D2R*2.5)); rim.push([cx+Math.cos(th*D2R)*r*(.9+.08*k), cy+Math.sin(th*D2R)*r*(.9+.08*k)]); }
+      g.fills.push(smooth(rim, true));
+      for (let i = 0; i < 5; i++) { const a=rot+i*72+R()*8; g.lines.push(petal(cx,cy,r*.98,a,96,.22,.04)); g.lines.push(petal(cx,cy,r*.8,a+28,38,.15,.02)); }
+      for (let i = 0; i < 4; i++) g.lines.push(petal(cx,cy,r*.64,rot+40+i*90+R()*10,122,.28,.04));
+      for (let i = 0; i < 3; i++) g.lines.push(petal(cx,cy,r*.4,rot+15+i*120,150,.35,.03));
+      const sp = []; for (let i = 0; i <= 26; i++) { const t=i/26, th=(rot+t*560)*D2R, rr=r*(.05+.22*t); sp.push([cx+Math.cos(th)*rr, cy+Math.sin(th)*rr]); }
+      g.lines.push(smooth(sp));
+    }
+    function bud(x, y, a, s) {
+      const g = group(); const dx=Math.cos(a), dy=Math.sin(a), nx=-dy, ny=dx; const P=(t,k)=>[x+dx*s*t+nx*s*k, y+dy*s*t+ny*s*k];
+      const body = smooth([P(0,0),P(.3,.42),P(.75,.32),P(1.05,0),P(.75,-.32),P(.3,-.42)], true);
+      g.fills.push(body); g.lines.push(body); g.lines.push(smooth([P(.25,0),P(.6,.12),P(1.0,0)]));
+      for (const k of [1,-1]) g.lines.push(smooth([P(-.05,0),P(.25,.5*k),P(.55,.38*k)]));
+    }
+    function eucalyptus(P, n, r0) {
+      stem(P);
+      for (let i = 1; i <= n; i++) { const t=i/(n+.6); const [x,y]=cubic(P,t), a=cubicDir(P,t), side=i%2?1:-1, r=r0*(1-.55*t);
+        const g = group(); const off=a+side*Math.PI/2; const cx=x+Math.cos(off)*r*.95, cy=y+Math.sin(off)*r*.95;
+        const c = []; for (let k=0;k<20;k++){ const th=k/20*Math.PI*2; c.push([cx+Math.cos(th)*r*(1+(R()-.5)*.08), cy+Math.sin(th)*r*.92]); }
+        const d = smooth(c, true); g.fills.push(d); g.lines.push(d); g.lines.push(`M${f(x)} ${f(y)}L${f(cx+Math.cos(off)*r*.5)} ${f(cy+Math.sin(off)*r*.5)}`); }
+    }
+    function berries(x, y, a, n) {
+      const g = group();
+      for (let i = 0; i < n; i++) { const aa=a+(i-(n-1)/2)*.32, L=14+R()*12; const ex=x+Math.cos(aa)*L, ey=y+Math.sin(aa)*L;
+        g.lines.push(`M${f(x)} ${f(y)}Q${f(x+Math.cos(aa+.2)*L*.5)} ${f(y+Math.sin(aa+.2)*L*.5)} ${f(ex)} ${f(ey)}`);
+        const c=[]; for(let k=0;k<10;k++){const th=k/10*Math.PI*2; c.push([ex+Math.cos(th)*2.6, ey+Math.sin(th)*2.6]);} const d=smooth(c,true); g.fills.push(d); g.lines.push(d); }
+    }
+    function blossom(x, y, r, rot) {
+      const g = group();
+      for (let i = 0; i < 5; i++) { const a=(rot+i*72)*D2R; const P=(t,k)=>[x+Math.cos(a)*r*t-Math.sin(a)*r*k, y+Math.sin(a)*r*t+Math.cos(a)*r*k];
+        const d = smooth([P(.15,0),P(.45,.38),P(.95,.3),P(1.05,0),P(.95,-.3),P(.45,-.38)], true); g.fills.push(d); g.lines.push(d); }
+      const c=[]; for(let k=0;k<10;k++){const th=k/10*Math.PI*2; c.push([x+Math.cos(th)*r*.18, y+Math.sin(th)*r*.18]);} const d=smooth(c,true); g.fills.push(d); g.lines.push(d);
+    }
+    function olive(P, n, L0) {
+      stem(P);
+      for (let i = 0; i < n; i++) { const t=.12+.84*i/n; const [x,y]=cubic(P,t), a=cubicDir(P,t), side=i%2?1:-1; const L=L0*(1-.4*t);
+        const g = group(); const dx=Math.cos(a+side*.42), dy=Math.sin(a+side*.42), nx=-dy, ny=dx; const Q=(u,k)=>[x+dx*L*u+nx*L*.11*k, y+dy*L*u+ny*L*.11*k];
+        const d = smooth([Q(0,0),Q(.3,.9),Q(.7,.75),Q(1,0),Q(.7,-.7),Q(.3,-.85)], true); g.fills.push(d); g.lines.push(d); g.lines.push(smooth([Q(.05,0),Q(.5,.08),Q(.88,0)])); }
+    }
+    function leavesAlong(P, n, L0, from, to) {
+      for (let i = 0; i < n; i++) { const t=from+(to-from)*(i+.5)/n; const [x,y]=cubic(P,t), a=cubicDir(P,t), side=i%2?1:-1; const L=L0*(1-.35*t)*(.85+R()*.3); leaf(x,y,a+side*(.5+R()*.25),L,L*.21); }
+    }
+    return { groups, stem, leaf, rose, bud, eucalyptus, berries, leavesAlong, blossom, olive, R };
+  }
+
+  // A corner spray anchored at the top-left corner (0,0) of a 340 x 340 box.
+  function corner(seed) {
+    const k = make(seed);
+    const A = [[66,62],[140,34],[220,20],[330,8]];      // along the top edge
+    const B = [[66,62],[44,140],[26,230],[10,330]];     // down the side edge
+    k.olive([[80,80],[150,120],[200,170],[232,232]], 9, 30);   // slender inward sprig
+    k.eucalyptus([[100,40],[160,62],[220,62],[286,84]], 7, 13);
+    k.eucalyptus([[44,96],[62,160],[64,220],[88,280]], 6, 12);
+    k.stem(A); k.stem(B);
+    k.leavesAlong(A, 7, 40, .3, .95);
+    k.leavesAlong(B, 7, 40, .3, .95);
+    k.berries(232,232, .8, 4);
+    k.bud(330,8, -.1, 24); k.bud(10,330, 1.65, 24);
+    for (const a of [-.35, .3, .78, 1.27, 1.95]) k.leaf(66+Math.cos(a)*34, 62+Math.sin(a)*34, a, 56, 12);
+    k.blossom(205, 46, 11, 10); k.blossom(118, 126, 10, 40); k.blossom(38, 245, 10, 0); k.blossom(258, 28, 8, 20);
+    k.rose(160, 30, 27, 30);
+    k.rose(30, 170, 25, 200);
+    k.rose(66, 62, 46, 110);
+    return k.groups;
+  }
+
+  function render(groups, cls) {
+    let s = '';
+    for (const g of groups) { for (const d of g.fills) s += `<path class="fl-fill" d="${d}"/>`; for (const d of g.lines) s += `<path class="fl-line" pathLength="1" d="${d}"/>`; }
+    return s;
+  }
+  return { corner, render };
+})();
+
+(function () {
+  const art = Flora.render(Flora.corner(7));
+  document.querySelectorAll('svg.spray').forEach(function (svg) {
+    svg.innerHTML = art;
+    const inCover = svg.closest('.cover'), n = svg.querySelectorAll('.fl-line').length;
+    if (inCover) svg.querySelectorAll('.fl-line').forEach(function (p, i) { p.style.setProperty('--d', (i / n * 1.6).toFixed(2) + 's'); });
+  });
+})();
+</script>
+<script>
+(function () {
+  const cv = document.getElementById('ink');
+  const body = document.body;
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!cv || !cv.getContext || reduce) { if (cv) cv.remove(); body.classList.add('reveal'); return; }
+
+  body.classList.add('intro');
+  const ctx = cv.getContext('2d');
+  const DPR = Math.min(window.devicePixelRatio || 1, 2);
+  const INK = '#4a1420', RIM = 'rgba(38,8,15,', HALO = 'rgba(110,30,46,';
+  const R = Math.random, TAU = Math.PI * 2;
+  let W, H, paper, inkFill;
+
+  // --- easing ---------------------------------------------------------------
+  const clamp = v => v < 0 ? 0 : v > 1 ? 1 : v;
+  const inOutSine = t => -(Math.cos(Math.PI * t) - 1) / 2;
+  const inOutCubic = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const outQuint = t => 1 - Math.pow(1 - t, 5);
+  const bleed = t => 1 - Math.exp(-3.2 * t);           // ink wicking: fast, then slower and slower
+
+  // --- textures (made once) -------------------------------------------------
+  function texture(size, base, spots, tone) {
+    const c = document.createElement('canvas'); c.width = c.height = size;
+    const g = c.getContext('2d'); g.fillStyle = base; g.fillRect(0, 0, size, size);
+    for (let i = 0; i < spots; i++) {             // soft mottling, tiled seamlessly
+      const x = R() * size, y = R() * size, r = 10 + R() * size * .28, a = R() * tone, light = R() > .5;
+      for (const ox of [-size, 0, size]) for (const oy of [-size, 0, size]) {
+        const gr = g.createRadialGradient(x + ox, y + oy, 0, x + ox, y + oy, r);
+        gr.addColorStop(0, light ? `rgba(255,235,225,${a})` : `rgba(20,0,6,${a})`); gr.addColorStop(1, 'rgba(0,0,0,0)');
+        g.fillStyle = gr; g.fillRect(x + ox - r, y + oy - r, r * 2, r * 2);
+      }
+    }
+    const img = g.getImageData(0, 0, size, size), d = img.data;   // fine grain
+    for (let i = 0; i < d.length; i += 4) { const n = (R() - .5) * 9; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+    g.putImageData(img, 0, 0);
+    return ctx.createPattern(c, 'repeat');
+  }
+  function size() {
+    W = innerWidth; H = innerHeight;
+    cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  }
+  size();
+  paper = texture(220, '#f8f0e2', 18, .012);
+  inkFill = texture(260, INK, 36, .045);
+  addEventListener('resize', size);
+
+  // --- stains: drops that land and bleed outward ------------------------------
+  function stain(x, y, at, maxR) {
+    return { x, y, at, maxR, ph: Array.from({ length: 6 }, () => R() * TAU), k: 2 + (R() * 3 | 0),
+      spat: Array.from({ length: 7 + (R() * 6 | 0) }, () => {
+        const a = R() * TAU; return { a, d: maxR * (.55 + R() * .9), r: 1 + R() * R() * 5, s: 1.3 + R() * 1.6 }; }) };
+  }
+  // drops fall one by one, first near the centre and then outward; each spot keeps
+  // bleeding slowly so that by the end neighbouring spots merge and cover the page
+  const D = Math.hypot(W, H);
+  const spots = [[.5,.42],[.26,.64],[.77,.27],[.7,.7],[.22,.2],[.52,.88],[.9,.5],[.1,.44],[.12,.9],[.88,.92],[.5,.07],[.9,.06]];
+  const stains = spots.map(([x, y], i) => stain(
+    W * (x + (R() - .5) * .06), H * (y + (R() - .5) * .04),
+    300 + i * 210 + R() * 80,
+    D * (i === 0 ? .13 : .06 + R() * .05)));
+  const BLOOM_AT = 300 + spots.length * 210 + 150, BLOOM = 1700;
+  function radiusAt(s, t) {
+    const u = (t - s.at) / 1000; if (u <= 0) return 0;
+    const spot = s.maxR * (.28 * outQuint(clamp(u / .2)) + .72 * bleed(u / 2));    // lands as a spot, then wicks outward
+    const bloom = inOutCubic(clamp((t - BLOOM_AT) / BLOOM)) * D * .5;             // finally every spot swells and they merge
+    return spot + bloom;
+  }
+  function stainPath(s, r, t, grow) {
+    const n = Math.max(28, Math.min(180, r * 1.4 | 0)), p = s.ph, w = t * .00025;
+    ctx.beginPath();
+    for (let i = 0; i <= n; i++) {
+      const a = i / n * TAU;
+      const m = 1 + .07 * Math.sin(s.k * a + p[0] + w) + .045 * Math.sin(5 * a + p[1] - w)
+                  + .022 * Math.sin(11 * a + p[2]) + .012 * Math.sin(23 * a + p[3] + w * 2)
+                  + .007 * Math.sin(47 * a + p[4]) + .004 * Math.sin(89 * a + p[5]);   // fibrous fringe
+      const rr = r * m + grow;
+      const x = s.x + Math.cos(a) * rr, y = s.y + Math.sin(a) * rr;
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+    ctx.closePath();
+  }
+  function drawStain(s, t) {
+    const pre = (s.at - t) / 260;                                     // the drop's shadow, tightening as it falls
+    if (pre > 0 && pre < 1) { const k = 1 - pre; ctx.fillStyle = `rgba(74,20,32,${(.16 * k).toFixed(3)})`;
+      ctx.beginPath(); ctx.ellipse(s.x, s.y, 3 + 9 * pre, 2.6 + 8 * pre, 0, 0, TAU); ctx.fill(); }
+    const r = radiusAt(s, t); if (r < .5) return;
+    const u = (t - s.at) / 1000;
+    // splatter flung at impact
+    const sp = clamp(u / .18);
+    if (sp > 0) for (const d of s.spat) {
+      const dd = d.d * outQuint(sp), x = s.x + Math.cos(d.a) * dd, y = s.y + Math.sin(d.a) * dd;
+      ctx.fillStyle = INK; ctx.beginPath(); ctx.ellipse(x, y, d.r * d.s, d.r, d.a, 0, TAU); ctx.fill();
+    }
+    ctx.fillStyle = HALO + '.07)'; stainPath(s, r, t, 4 + r * .05); ctx.fill();      // damp halo in the paper
+    ctx.fillStyle = HALO + '.10)'; stainPath(s, r, t, 1.5 + r * .02); ctx.fill();
+    ctx.fillStyle = inkFill; stainPath(s, r, t, 0); ctx.fill();                     // the ink body
+    const pool = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, r);               // paler centre, pigment pooled at the edge
+    pool.addColorStop(0, 'rgba(255,228,220,.09)'); pool.addColorStop(.75, 'rgba(255,228,220,0)'); pool.addColorStop(1, 'rgba(20,0,6,.18)');
+    ctx.fillStyle = pool; stainPath(s, r, t, 0); ctx.fill();
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = RIM + '.42)'; ctx.lineWidth = Math.max(1, Math.min(3.2, r * .028)); stainPath(s, r - ctx.lineWidth * .5, t, 0); ctx.stroke(); // coffee ring
+    ctx.strokeStyle = RIM + '.12)'; ctx.lineWidth = 1; stainPath(s, r * .78, t + 900, 0); ctx.stroke();  // tide lines
+    ctx.strokeStyle = RIM + '.07)'; stainPath(s, r * .56, t + 1800, 0); ctx.stroke();
+  }
+
+  // --- loop -----------------------------------------------------------------
+  const FADE_AT = BLOOM_AT + BLOOM * .78, END = FADE_AT + 1300;
+  let last = null, t = 0, speed = 1, revealed = false, done = false;
+  function frame(now) {
+    if (last === null) last = now;
+    t += Math.min(50, now - last) * speed; last = now;    // clamp dropped frames so motion never jumps
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
+    for (const s of stains) drawStain(s, t);
+    if (t >= FADE_AT && !revealed) {
+      revealed = true; body.classList.add('reveal'); body.classList.remove('intro');
+      cv.classList.add('gone');                               // ink dissolves into the cover beneath
+    }
+    if (t < END) requestAnimationFrame(frame); else finish();
+  }
+  function finish() {
+    if (done) return; done = true;
+    body.classList.add('reveal'); body.classList.remove('intro');
+    cv.classList.add('gone'); setTimeout(() => cv.remove(), 1400);
+  }
+  cv.addEventListener('pointerdown', () => { speed = 3.5; });   // tap to hurry it along, still smooth
+
+  const go = () => requestAnimationFrame(frame);
+  const fonts = document.fonts && document.fonts.ready;
+  if (fonts) Promise.race([fonts, new Promise(r => setTimeout(r, 1200))]).then(go); else go();
+  setTimeout(finish, 9000); // safety net
+})();
+</script>
+</body>
+</html>
